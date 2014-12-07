@@ -1,4 +1,27 @@
 
+0.47.0 / 2014-11-19
+==================
+
+  * Shout now supports fullscreen on iOS
+
+0.46.0 / 2014-11-14
+==================
+
+  * Fix commands being removed from user.json
+  * Added dynamic title
+  * Turn off input autocomplete
+
+0.45.5 / 2014-11-05
+==================
+
+  * Minor bugfixes
+
+0.45.4 / 2014-11-05
+==================
+
+  * Added username input
+  * Added 'morning' theme by @rikukissa
+
 0.45.3 / 2014-10-27
 ==================
 

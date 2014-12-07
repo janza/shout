@@ -31,6 +31,10 @@ $(function() {
 	var sidebar = $("#sidebar, #footer");
 	var chat = $("#chat");
 
+	if (navigator.standalone) {
+		$("html").addClass("web-app-mode");
+	}
+
 	try {
 		var pop = new Audio();
 		pop.src = "/audio/pop.ogg";
@@ -524,7 +528,13 @@ $(function() {
 			.find(".chat")
 			.sticky()
 			.end();
-
+		
+		var title = "Shout";
+		if (chan.data("title")) {
+			title = chan.data("title") + " — " + title;
+		}
+		document.title = title;
+		
 		if (self.hasClass("chan")) {
 			var nick = self
 				.closest(".network")
@@ -732,6 +742,11 @@ $(function() {
 		socket.emit(
 			event, values
 		);
+	});
+	
+	forms.on("input", ".nick", function() {
+		var nick = $(this).val();
+		forms.find(".username").val(nick);
 	});
 
 	Mousetrap.bind([

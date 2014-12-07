@@ -52,7 +52,7 @@ module.exports = {
 	// @default  true
 	//
 	autoload: true,
-	
+
 	//
 	// Prefetch URLs
 	//
@@ -147,6 +147,14 @@ module.exports = {
 		nick: "shout-user",
 
 		//
+		// Username
+		//
+		// @type     string
+		// @default  "shout-user"
+		//
+		username: "shout-user",
+
+		//
 		// Real Name
 		//
 		// @type     string
@@ -162,6 +170,14 @@ module.exports = {
 		//
 		join: "#foo, #shout-irc"
 	},
+
+	//
+	// Set socket.io transports
+	//
+	// @type     array
+	// @default  ["polling', "websocket"]
+	//
+	transports: ["polling", "websocket"],
 
 	//
 	// Run Shout with HTTPS support.
